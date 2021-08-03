@@ -117,7 +117,7 @@ Citizen.CreateThread(function()
             local atmHeading = GetEntityHeading(atm)
             local distance = Vdist(pedPos.x, pedPos.y, pedPos.z, atmOffset.x, atmOffset.y, atmOffset.z)
             if distance <= 1.7 and not IsPedInAnyVehicle(ped) then
-                DrawText3Ds(atmOffset.x, atmOffset.y, atmOffset.z + 1.0, tostring("Press [~g~E~w~] to use the ATM"))
+                DrawText3Ds(atmOffset.x, atmOffset.y, atmOffset.z + 1.0, "Press [~g~E~w~] to use the ATM")
                 if IsControlJustPressed(1, 38) then
                     TriggerServerEvent("dl-banking:server:requestOpen")
                 end
